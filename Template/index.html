@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    // function 함수 세가지 방식
+    // 1. function 키워드
+    // function add(a, b) {
+    //   return a + b;
+    // }
+    // 2. 함수 표현식
+    // const add = function (a, b) {
+    //   return a + b;
+    // };
+    // 3. 화살표 함수 (매개변수가 하나일 때는 괄호 생략 가능, 한줄일 때는 return 생략 가능)
+    // const add = (a, b) => a + b;
+
+    // 옵셔널 체이닝
+    // let obj = {
+    //   a: 1,
+    //   b: {
+    //     c: 2,
+    //   },
+    // };
+
+    // console.log(obj?.b?.c);
+
+    // 구조 분해 할당
+    // 배열
+    // let arr = [1, 2, 3, 4, 5];
+    // let [a, b, c, d, e] = arr;
+
+    // console.log(a, b, c, d, e);
+
+    // 객체
+    // let obj = {
+    //   a: 1,
+    //   b: 2,
+    //   c: 3,
+    // };
+
+    // let { a, b, c } = obj;
+
+    // console.log(a, b, c);
+
+    // 함수 구조 분해 할당 (기본값 설정)
+    // function solution({a, b, c, d=40}) {
+    //   console.log(a, b, c, d);
+    // }
+
+    // solution(a, b, c, d);
+
+    // rest syntax
+    // function solution(a, b, ...c) {
+    //   console.log(a, b, c);
+    // }
+
+    // solution(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+    // spread 문법
+    // let arr = [1, 2, 3, 4, 5];
+    // let arr2 = [...arr];
+
+    // console.log(arr2); // [1, 2, 3, 4, 5]
+
+    // forEach 메서드
+    // let arr = [1, 2, 3, 4, 5];
+
+    // arr.forEach((item, index) => {
+    //   console.log(item, index);
+    // });
+
+    // map 메서드
+    // let arr = [1, 2, 3, 4, 5];
+
+    // let arr2 = arr.map((item, index) => {
+    //   return item * 2;
+    // });
+
+    // console.log(arr2);
+
+    // filter 메서드
+    // let arr = [1, 2, 3, 4, 5];
+
+    // let arr2 = arr.filter((item, index) => {
+    //   return item % 2 === 0;
+    // });
+
+    // console.log(arr2);
+
+    // reduce 메서드
+    // let arr = [1, 2, 3, 4, 5];
+
+    // let arr3 = ['a', 'b', 'c', 'd', 'e'];
+
+    // let data = arr3.reduce((pre, cur) => {
+    //   pre[cur] = pre[cur] ? pre[cur] + 1 : 1
+    //   return pre;
+    // }, {});
+
+    // console.log(data);
+
+    // sort 메서드
+    // let arr = [1, 2, 3, 4, 5];
+
+    // arr.sort(); // 오름차순
+    // arr.sort((a, b) => a - b); // 오름차순
+    // arr.sort().reverse(); // 내림차순
+    // arr.sort((a, b) => b - a); // 내림차순
+
+    // console.log(arr);
+  </script>
+</html>

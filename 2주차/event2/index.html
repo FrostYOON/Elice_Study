@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event2</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    body 영역
+    <main>
+      main 영역
+      <article>
+        article 영역
+        <div>
+          div 영역
+          <p>
+            p 영역
+            <span> span 영역 </span>
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+  <script>
+    const body = document.querySelector("body");
+    const main = document.querySelector("main");
+    const article = document.querySelector("article");
+    const div = document.querySelector("div");
+    const p = document.querySelector("p");
+    const span = document.querySelector("span");
+
+    // e.eventPhase : 이벤트 단계
+    // e.stopPropagation() : 이벤트 전파 중단
+    // e.preventDefault() : 기본 동작 중단
+    // e.stopImmediatePropagation() : 이벤트 중단 및 동시 이벤트 중단
+    // true : 캡처링 단계
+    body.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "body 태그가 클릭 됐습니다.");
+    }, true);
+    main.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "main 태그가 클릭 됐습니다.");
+    }, true);
+    article.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "article 태그가 클릭 됐습니다.");
+    }, true);
+    div.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "div 태그가 클릭 됐습니다.");
+    }, true);
+    p.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "p 태그가 클릭 됐습니다.");
+    }, true);
+    span.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "span 태그가 클릭 됐습니다.");
+    }, true);
+
+    // false : 버블링 단계 (기본값)
+    body.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "body 태그가 클릭 됐습니다.");
+    }, false);
+    main.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "main 태그가 클릭 됐습니다.");
+    }, false);
+    article.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "article 태그가 클릭 됐습니다.");
+    }, false);
+    div.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "div 태그가 클릭 됐습니다.");
+    }, false);
+    p.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "p 태그가 클릭 됐습니다.");
+    }, false);
+    span.addEventListener("click", (e) => {
+      console.log(e.eventPhase + "span 태그가 클릭 됐습니다.");
+    }, false);
+  </script>
+</html>

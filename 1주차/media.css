@@ -1,0 +1,16 @@
+@media screen and (min-width: 992px) {
+  #desktop {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+  #tablet {
+    color: blue;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mobile {
+    color: green;
+  }
+}

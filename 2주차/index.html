@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- <script src="index.js" defer></script> -->
+    <header>
+      <!-- <h1>press: <span id="key"></span></h1>
+      <button>로그인</button> -->
+    </header>
+
+    <main>
+      <button style="background-color: red;">!</button>
+      <button id="register">이벤트 핸들러 등록</button>
+      <button id="remove">이벤트 핸들러 제거</button>
+    </main>
+  </body>
+  <script>
+    // 요소 선택
+    // let box1 = document.getElementById("box1");
+    // console.dir(box1);
+    // let box2 = document.getElementsByClassName("box");
+    // console.dir(box2);
+    // let box3 = document.getElementsByTagName("div");
+    // console.dir(box3);
+    // let box4 = document.querySelector(".box");
+    // console.dir(box4);
+    // let box5 = document.querySelectorAll(".box");
+    // console.dir(box5);
+    // let box6 = document.getElementsByName("id");
+    // console.dir(box6);
+
+    // 박스 요소 스타일 변경
+    // let boxs = document.getElementsByClassName("box");
+    // boxs[0].style.backgroundColor = "yellow";
+    // boxs[0].innerText = "박스요소 2";
+
+    // let boxs2 = document.querySelectorAll(".box");
+    // boxs2.forEach((item, index) => {
+    //   item.innerText = `박스요소 ${index + 1}`;
+    // });
+
+    // let input = document.querySelector("div");
+    // input.innerText = "<div>안녕하세요</div>";
+
+    // 폼 요소 추가
+    // const form = document.createElement("form");
+    // form.action = "";
+
+    // const input1 = document.createElement("input");
+    // input1.type = "text";
+    // input1.name = "id";
+    // input1.id = "id";
+    // input1.placeholder = "ID";
+
+    // const input2 = document.createElement("input");
+    // input2.type = "password";
+    // input2.name = "password";
+    // input2.id = "password";
+    // input2.placeholder = "Password";
+
+    // const submitInput = document.createElement("input");
+    // submitInput.type = "submit";
+    // submitInput.value = "로그인";
+
+    // form.appendChild(input1);
+    // form.appendChild(input2);
+    // form.appendChild(submitInput);
+
+    // // 폼 요소 추가
+    // const mainTag = document.querySelector("main");
+    // mainTag.appendChild(form);
+
+    // form.addEventListener("submit", e => {
+    //   e.preventDefault();
+    // });
+
+    // const input1 = document.createElement("input");
+    // input1.type = "text";
+    // input1.name = "id";
+    // input1.id = "id";
+    // input1.placeholder = "ID";
+
+    // const input2 = document.createElement("input");
+    // input2.type = "password";
+    // input2.name = "password";
+    // input2.id = "password";
+    // input2.placeholder = "Password";
+
+    // const submitInput = document.createElement("input");
+    // submitInput.type = "submit";
+    // submitInput.value = "로그인";
+
+    // form.appendChild(input1);
+    // form.appendChild(input2);
+    // form.appendChild(submitInput);
+
+    // 폼 요소 추가
+    // const form = document.querySelector("form");
+    // form.appendChild(input2);
+    // form.appendChild(submitInput);
+    // form.parentElement.appendChild(form);
+
+    // 버튼 클릭 이벤트
+    // const button = document.querySelector("button");
+    // const handleClick = e => console.log("로그인 버튼이 클릭되었습니다.");
+    // button.onclick = handleClick;
+    // button.addEventListener("click", (e) => console.dir(e));
+
+    // 키 입력 이벤트
+    // const key = document.getElementById("key");
+    // window.addEventListener("keypress", e => {
+    //   key.innerText = e.key;
+    //   console.dir(e);
+    // });
+
+    // 마우스 이벤트
+    // const button = document.querySelector("button");
+    // button.addEventListener("click", e => {
+    //   console.dir(e.target);
+    // });
+
+    // const btn = document.querySelector("button");
+    // const register = document.querySelector("#register");
+    // const remove = document.getElementById("remove");
+
+    // const handleEvent = (e) => {
+    //   console.log(e.clientX, e.clientY);
+    // };
+
+    // register.addEventListener("click", () => {
+    //   btn.addEventListener("click", handleEvent);
+    //   console.log("이벤트 핸들러 등록");
+    // });
+
+    // remove.addEventListener("click", () => {
+    //   btn.removeEventListener("click", handleEvent);
+    //   console.log("이벤트 핸들러 제거");
+    // });
+  </script>
+</html>

@@ -1,0 +1,35 @@
+body,
+main,
+article,
+div,
+p,
+span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+body {
+  background-color: #ddd;
+}
+
+main {
+  background-color: #bbb;
+}
+
+article {
+  background-color: #999;
+}
+
+div {
+  background-color: #777;
+}
+
+p {
+  background-color: #555;
+}
+
+span {
+  background-color: #333;
+}
