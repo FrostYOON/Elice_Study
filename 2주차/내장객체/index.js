@@ -58,11 +58,33 @@ let a = 123.1231234;
 // console.log(day.getFullYear()); // 년 (4자리)
 // console.log(day.getMonth()); // 월 (0 ~ 11)
 // console.log(day.getDate()); // 일 (1 ~ 31)
-// console.log(day.getDay()); // 요일 (0 ~ 6)
+// console.log(day.getDay()); // 요일 (0 ~ 6) (일요일 : 0, 월요일 : 1, 화요일 : 2, 수요일 : 3, 목요일 : 4, 금요일 : 5, 토요일 : 6)
 // console.log(day.getHours()); // 시 (0 ~ 23)
 // console.log(day.getMinutes()); // 분 (0 ~ 59)
 // console.log(day.getSeconds()); // 초 (0 ~ 59)
 // console.log(day.getMilliseconds()); // 밀리초 (0 ~ 999)
+
+// setDate : 날짜 설정
+// toDateString : 날짜 문자열 반환
+// function addDays(date, days) {
+//   date.setDate(date.getDate() + days);
+//   return date.toDateString();
+// }
+
+// console.log(addDays(new Date(), 10)); // 오늘 날짜에서 10일 더한 날짜 반환
+
+// getTime : 밀리초 반환
+function timeDiff(date1, date2) {
+  return date1.getTime() - date2.getTime();
+}
+
+let dayTime = 60 * 60 * 24 * 1000;
+function fromNow(date) {
+  let diff = timeDiff(date, new Date());
+  return Math.floor(diff / dayTime);
+}
+
+console.log(fromNow(new Date("2024-12-07"))); // 오늘 날짜에서 7일 전 날짜 반환
 
 // 문자열 반환
 // console.log("asdfg".charAt(0)); // 문자열 중 특정 인덱스 문자 반환
