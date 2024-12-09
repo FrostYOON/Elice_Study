@@ -74,17 +74,17 @@ let a = 123.1231234;
 // console.log(addDays(new Date(), 10)); // 오늘 날짜에서 10일 더한 날짜 반환
 
 // getTime : 밀리초 반환
-function timeDiff(date1, date2) {
-  return date1.getTime() - date2.getTime();
-}
+// function timeDiff(date1, date2) {
+//   return date1.getTime() - date2.getTime();
+// }
 
-let dayTime = 60 * 60 * 24 * 1000;
-function fromNow(date) {
-  let diff = timeDiff(date, new Date());
-  return Math.floor(diff / dayTime);
-}
+// let dayTime = 60 * 60 * 24 * 1000;
+// function fromNow(date) {
+//   let diff = timeDiff(date, new Date());
+//   return Math.floor(diff / dayTime);
+// }
 
-console.log(fromNow(new Date("2024-12-07"))); // 오늘 날짜에서 7일 전 날짜 반환
+// console.log(fromNow(new Date("2024-12-07"))); // 오늘 날짜에서 7일 전 날짜 반환
 
 // 문자열 반환
 // console.log("asdfg".charAt(0)); // 문자열 중 특정 인덱스 문자 반환
@@ -107,14 +107,52 @@ console.log(fromNow(new Date("2024-12-07"))); // 오늘 날짜에서 7일 전 �
 // console.log("asdfg".startsWith("a")); // 문자열 시작 확인
 
 // 문자열 포맷
-console.log(String.raw`\n`); // 원시 문자열
+// console.log(String.raw`\n`); // 원시 문자열
 
-// JSON
-let data = {
-  name: "John",
-  age: 30,
-  city: "New York",
-};
+// // JSON
+// let data = {
+//   name: "John",
+//   age: 30,
+//   city: "New York",
+// };
 
-console.log(JSON.stringify(data)); // JSON 문자열 변환 (serializer : 직렬화)
-console.log(JSON.parse(JSON.stringify(data))); // JSON 객체 변환 (deserializer : 역직렬화)
+// console.log(JSON.stringify(data)); // JSON 문자열 변환 (serializer : 직렬화)
+// console.log(JSON.parse(JSON.stringify(data))); // JSON 객체 변환 (deserializer : 역직렬화)
+
+// Set : 중복 없이 유일한 값을 저장하는 자료구조 (집합)
+// const set = new Set([1,2,3,4,1,2]);
+
+// set.add(5); // 추가
+// set.delete(1); // 삭제
+// set.clear(); // 모두 삭제
+// set.has(1); // 포함 여부
+// set.size; // 크기
+// set.forEach((item) => {
+//   console.log(item);
+// }); // 반복
+// set.values(); // 값 반환
+// set.keys(); // 키 반환
+// set.entries(); // 키와 값 반환
+
+// console.log(set);
+
+// Map : 키와 값의 쌍을 저장하는 자료구조 (맵)
+// const mapData = new Map()
+
+// mapData.set("name", "Yoon"); // 추가
+// mapData.set("age", 20);
+// mapData.set("city", "Seoul");
+
+// mapData.get("name"); // 키 값 반환
+// mapData.has("name"); // 포함 여부
+// mapData.size; // 크기
+// mapData.delete("name"); // 삭제
+// mapData.clear(); // 모두 삭제
+// mapData.forEach((item) => {
+//   console.log(item);
+// }); // 반복
+// mapData.values(); // 값 반환
+// mapData.keys(); // 키 반환
+// mapData.entries(); // 키와 값 반환
+
+// console.log(mapData);
