@@ -1,3 +1,4 @@
+// this 키워드
 // const hellobit = {
 //   name: 'hellobit',
 //   age: 20,
@@ -5,7 +6,7 @@
 //     console.log(`안녕하세요, 저는 ${this.name}이고 ${this.age}살입니다.`);
 //   }
 // }
-// 실행컨텍스트
+
 // hellobit.introduce();
 
 // const hellobit = {
@@ -29,10 +30,9 @@
 
 // 실행컨텍스트
 // 함수 호출 방식에 따라 실행컨텍스트가 달라짐
-// apply : 함수 호출 시 첫번째 인자는 실행컨텍스트, 두번째 인자는 인자 배열
-// call : 함수 호출 시 첫번째 인자는 실행컨텍스트, 두번째 인자는 인자 배열
-// bind : 함수 호출 시 첫번째 인자는 실행컨텍스트, 두번째 인자는 인자 배열
-// 모두 함수를 호출하는 것이지만 실행컨텍스트가 다름
+// apply : 함수 호출 시 첫번째 인자는 실행컨텍스트, 두번째 인자는 배열로 인수 전달
+// call : 함수 호출 시 첫번째 인자는 실행컨텍스트, 두번째 인자는 매개변수로 인수 전달
+// bind : 함수 호출 시 첫번째 인자는 실행컨텍스트, 두번째 인자는 바인딩 된 함수 자체를 반환
 // introduce.apply(hellobit, ['남', '코딩']);
 // introduce.call(testData, '여', '영화');
 // introduce.bind(testData2)('남', '코딩');
@@ -70,3 +70,18 @@
 // }
 
 // console.log(Object.entries(data));
+
+function solution(rank, attendance) {
+  var answer = 0;
+  const pass = [];
+  rank.forEach((item, idx) => {
+    if(attendance[idx]) {
+      pass.push({ item, idx })
+    }
+  })
+  pass.sort();
+  answer = pass[0].idx * 10000 + pass[1].idx * 100 + pass[2].idx;
+  return answer;
+}
+
+console.log(solution([3, 7, 2, 5, 4, 6, 1], [false, true, true, true, true, false, false]));
