@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+label:hover {
+  background-color: #0056b3;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
