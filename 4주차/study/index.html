@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div>
-    <label for="upload">파일 선택</label>
-    <input type="file" id="upload" accept="image/*">
-    <label for="delete">삭제</label>
-    <input type="button" id="delete" value="삭제">
-  </div>
-  <img src="" alt="선택된 이미지" id="img">
+    <div>
+        <div id="toggleImageUpload">파일 업로드</div>
+        <div id="delete">파일 삭제</div>
+    </div>
+    <img src="" alt="사진이 없습니다." id="image">
+
+    <dialog id="uploadModal">
+        <form method="modal" id="uploadForm">
+            <div class="modal-header">
+                <label for="upload">파일 선택</label>
+                <input id="upload" type="file" accept="image/*">
+    
+                <div id="save">저장</div>
+                <div id="close">close</div>
+            </div>
+    
+            <img src="" alt="사진이 없습니다." id="imagePreview">
+        </form>
+
+    </dialog>
+</body>
 <script src="index.js"></script>
 </html>

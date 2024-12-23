@@ -1,37 +1,62 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const upload = document.getElementById("upload");
-  const img = document.getElementById("img");
-  const deleteBtn = document.getElementById("delete");
+this.addEventListener('DOMContentLoaded',()=>{
+  const uploadElement = document.getElementById('upload')
+  const imageElement = document.getElementById('image')
+  const deleteElement = document.getElementById('delete')
+  const uploadModalElement = document.getElementById('uploadModal')
+  const toggleImageUploadElement = document.getElementById('toggleImageUpload')
+  const imagePreviewElement = document.getElementById('imagePreview')
+  const saveElement = document.getElementById('save')
+  const closeElement = document.getElementById('close')
 
-  function saveImageToLocalStorage(file) {
-    localStorage.setItem("image", file);
+
+  function saveImageToLocalStorage(data){
+      localStorage.setItem('image', data)
+      imageElement.src=data;
   }
 
-  function loadImageFromLocalStorage() {
-    const imageData = localStorage.getItem("image");
-    if (imageData) {
-      img.src = imageData;
-    }
-  }
-
-  upload.addEventListener("change", (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const imageData = e.target.result;
-        saveImageToLocalStorage(imageData);
-        img.src = imageData;
+  function loadImageFromLocalStroage(){
+      const image = localStorage.getItem('image');
+      if(image){
+          imageElement.src = image
       }
-      reader.readAsDataURL(file);
-    }
+  }
+  saveElement.addEventListener('click', ()=>{
+      if(imagePreviewElement.src){
+          saveImageToLocalStorage(imagePreviewElement.src)
+          uploadModalElement.close();
+
+      }
+
+  })
+  window.addEventListener('keydown', (e)=>{
+      if(e.key ==='Escape')
+          uploadModalElement.close();
+  })
+  closeElement.addEventListener('click', (e)=>{
+      uploadModalElement.close();
   })
 
-  deleteBtn.addEventListener("click", () => {
-    localStorage.removeItem("image");
-    // localStorage.clear();
-    img.src = "";
+  toggleImageUploadElement.addEventListener('click', (e)=>{
+      uploadModalElement.showModal();
   })
 
-  loadImageFromLocalStorage();
+  uploadElement.addEventListener('change', (e)=>{
+      console.log(e)
+      const file = e.target.files[0];
+      if(file){
+          const reader = new FileReader()
+          reader.onload = function(e) {
+              const imageData = e.target.result;
+              imagePreviewElement.src = imageData
+          }
+          reader.readAsDataURL(file)
+      }
+  })
+  deleteElement.addEventListener('click', ()=>{
+      localStorage.removeItem('image')
+      // localStorage.clear()
+      imageElement.src = ''
+  })
+
+  loadImageFromLocalStroage();
 })
