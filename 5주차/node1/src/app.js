@@ -1,13 +1,13 @@
 // express 모듈 사용 서버 생성
-import express from 'express';
+// import express from 'express';
 
-const app = express();
+// const app = express();
 
-app.get('/test', (req, res) => {
-  res.send('Hello World!!!');
-});
+// app.get('/test', (req, res) => {
+//   res.send('Hello World!!!');
+// });
 
-export default app;
+// export default app;
 
 
 // http 모듈 사용 서버 생성
