@@ -1,4 +1,3 @@
-
 // DB 예시
 import mongoose from "mongoose";
 
