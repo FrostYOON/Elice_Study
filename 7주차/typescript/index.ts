@@ -55,6 +55,43 @@ enum Food {
 
 console.log(Food);
 
+interface Animal {
+  makeSound(): void;
+}
+
+interface Mammal {
+  legs: number;
+}
+
+class BullDog implements Animal, Mammal {
+  legs: number = 4;
+  makeSound() {
+    console.log('멍멍');
+  }
+}
+
+abstract class Animal2 {
+  abstract makeSound(): void;
+}
+
+class Whale extends Animal2 implements Mammal {
+  legs: number = 0;
+  makeSound() {
+    console.log('우우');
+  }
+}
+
+class Dog extends Animal2 {
+  makeSound(): void {
+    console.log('멍멍');
+  }
+}
+
+const dog = new Dog();
+dog.makeSound();
+const bullDog = new BullDog();
+bullDog.makeSound();
+console.log(bullDog.legs);
 // // string : 문자열
 // let str: string = '123';
 
@@ -115,3 +152,13 @@ console.log(Food);
 // };
 
 // let person: Person = { name: 'John', age: 20 };
+
+// readonly
+// type ReadonlyUser = {
+//   readonly name: string;
+//   readonly age: number;
+// };
+
+// const arr: readonly number[] = [1, 2, 3];
+
+// const tuple: readonly [number, string] = [1, '2'];
