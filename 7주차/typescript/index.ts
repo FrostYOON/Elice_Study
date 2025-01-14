@@ -1,3 +1,5 @@
+// import is from '@sindresorhus/is';
+
 // let str: string;
 
 // str = '123';
@@ -121,45 +123,45 @@
 // getSize(['1', '2', '3']);
 // getSize([{ a: 1 }, { b: 2 }, { c: 3 }]);
 
-function getSize<T extends string | number | object>(arr: T[]): number {
-  return arr.length;
-}
+// function getSize<T extends string | number | object>(arr: T[]): number {
+//   return arr.length;
+// }
 
 // console.log(getSize<number>([1, 2, 3]));
 // console.log(getSize<string>(['1', '2', '3']));
 // console.log(getSize<object>([{ a: 1 }, { b: 2 }, { c: 3 }]));
 
-getSize<number>([1, 2, 3]);
-getSize<string>(['1', '2', '3']);
-getSize<object>([{ a: 1 }, { b: 2 }, { c: 3 }]);
+// getSize<number>([1, 2, 3]);
+// getSize<string>(["1", "2", "3"]);
+// getSize<object>([{ a: 1 }, { b: 2 }, { c: 3 }]);
 
-interface MobilePhone<T, K> {
-  name: string,
-  year: Date,
-  company: string,
-  options: T,
-  infomation: K,
-}
+// interface MobilePhone<T, K> {
+//   name: string;
+//   year: Date;
+//   company: string;
+//   options: T;
+//   infomation: K;
+// }
 
-type Options = {
-  color: string;
-}
+// type Options = {
+//   color: string;
+// };
 
-type Infomation = {
-  camera: number;
-}
+// type Infomation = {
+//   camera: number;
+// };
 
-const m1: MobilePhone<Options, Infomation> = {
-  name: 's24',
-  year: new Date('2024-01-01'),
-  company: 'samsung',
-  options: {
-    color: 'black',
-  },
-  infomation: {
-    camera: 10000000,
-  },
-};
+// const m1: MobilePhone<Options, Infomation> = {
+//   name: "s24",
+//   year: new Date("2024-01-01"),
+//   company: "samsung",
+//   options: {
+//     color: "black",
+//   },
+//   infomation: {
+//     camera: 10000000,
+//   },
+// };
 
 // function add(a: number, b: number): number;
 // function add(a: string, b: string): string;
@@ -177,49 +179,49 @@ const m1: MobilePhone<Options, Infomation> = {
 // console.log(add('1', 2));
 // console.log(add(1, '2'));
 
-// // string : 문자열
+// string : 문자열
 // let str: string = '123';
 
-// // number : 숫자
+// number : 숫자
 // let num: number = 123;
 
-// // boolean : 불리언
+// boolean : 불리언
 // let bool: boolean = true;
 
-// // array : 배열
+// array : 배열
 // let arr: number[] = [1, 2, 3];
 
-// // object : 객체
+// object : 객체
 // let obj: { name: string; age: number } = { name: 'John', age: 20 };
 
-// // tuple : 고정된 길이의 배열
+// tuple : 고정된 길이의 배열
 // let tuple: [number, string] = [1, '2'];
 
-// // enum : 열거형
+// enum : 열거형
 // enum Color {
 //   Red,
 //   Green,
 //   Blue,
 // }
 
-// // any : 모든 타입을 허용
+// any : 모든 타입을 허용
 // let any: any = '123';
 
-// // void : 반환 값이 없는 함수
+// void : 반환 값이 없는 함수
 // function func2(): void {
 //   console.log('123');
 // }
 
-// // union : 두 타입 중 하나
+// union : 두 타입 중 하나
 // let union: number | string = 123;
 
-// // intersection : 두 타입을 합친 타입
+// intersection : 두 타입을 합친 타입
 // let intersection: { a: number } & { b: string } = { a: 1, b: '2' };
 
-// // unknown : 알 수 없는 타입
+// unknown : 알 수 없는 타입
 // let unknown: unknown = '123';
 
-// // never : 종료되지 않는 함수
+// never : 종료되지 않는 함수
 // function func3(): never {
 //   throw new Error('123');
 // }
@@ -248,11 +250,11 @@ const m1: MobilePhone<Options, Infomation> = {
 
 // const tuple: readonly [number, string] = [1, '2'];
 
-interface User {
-  id: string;
-  name: string;
-  age: number;
-}
+// interface User {
+//   id: string;
+//   name: string;
+//   age: number;
+// }
 
 // const createUser = (user: Partial<User>) => {
 //   console.log(user);
@@ -270,10 +272,124 @@ interface User {
 //   console.log(user);
 // };
 
-const createUser = (user: Omit<User, 'id'>) => {
-  console.log(user);
-};
+// const createUser = (user: Omit<User, "id">) => {
+//   console.log(user);
+// };
 
-type returnTypeOfCreateUser = ReturnType<typeof createUser>;
+// type returnTypeOfCreateUser = ReturnType<typeof createUser>;
 
 // createUser({ id: '1' });
+
+// interface TypeA {
+//   a: string;
+//   b: number;
+// }
+
+// interface TypeB extends TypeA {
+//   c: boolean;
+// }
+
+// const obj4: TypeB = { a: "1", b: 2, c: true };
+
+// type TypeC = {
+//   a: string;
+//   b: number;
+// }
+
+// type TypeD = {
+//   c: boolean;
+// }
+
+// const obj5: TypeC & TypeD = { a: "1", b: 2, c: true };
+
+type ObjA = {
+  a: number;
+  fly: () => void;
+};
+
+type ObjB = {
+  a: number;
+  walk: () => void;
+};
+
+// 클래스 타입 (instanceof)
+class Dog {
+  bark() {
+    console.log('멍멍');
+  }
+}
+
+class Cat {
+  meow() {
+    console.log('야옹');
+  }
+}
+
+const cat = new Cat();
+const dog = new Dog();
+
+const makeSound = (obj: Cat | Dog) => {
+  if (obj instanceof Cat) {
+    obj.meow();
+  } else if (obj instanceof Dog) {
+    obj.bark();
+  }
+};
+
+const func = (obj: Dog | Cat) => {
+  if (obj instanceof Dog) {
+    obj.bark();
+  } else if (obj instanceof Cat) {
+    obj.meow();
+  }
+};
+
+let str: string = '123';
+
+if (typeof str === 'string') {
+  console.log(str);
+}
+
+// 리터럴 타입
+type Action = 'stop' | 'start' | 'end';
+
+function func1(action: Action) {
+  if (action === 'stop') {
+    console.log('멈춤');
+  } else if (action === 'start') {
+    console.log('시작');
+  } else if (action === 'end') {
+    console.log('종료');
+  }
+}
+
+// const id = req?.query?.id;
+
+type ArrStr = {
+  [key: string]: number | string;
+  [index: number]: string;
+};
+
+const arr1: ArrStr = {};
+
+arr1['a'] = 1;
+arr1[1] = '1';
+
+// Type Guard
+type CustomType = {
+  id: number;
+  name: string;
+};
+
+function isCustomType(obj: any): obj is CustomType {
+  return (
+    typeof obj === 'object' &&
+    obj !== null &&
+    'id' in obj &&
+    typeof obj.id === 'number' &&
+    'name' in obj &&
+    typeof obj.name === 'string'
+  );
+}
+
+isCustomType({ id: 1, name: 'John' });
